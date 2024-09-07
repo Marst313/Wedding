@@ -1,0 +1,9 @@
+export { default as Homepage } from './Homepage';
+export { default as Landingpage } from './Landingpage';
+export { default as Errorpage } from './Errorpage';
+export { default as LandingLayout } from './LandingLayout';
+export { default as Opening } from './Opening';
+export { default as Quotes } from './Quotes';
+export { default as Ucapan } from './Ucapan';
+export { default as Lokasi } from './Lokasi';
+export { default as Gift } from './Gift';

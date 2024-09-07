@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'GreatVibes-Regular';
+  src: url('./assets/fonts/GreatVibes-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'miama';
+  src: url('./assets/fonts/miama.otf');
+}
+
+@font-face {
+  font-family: 'WORK-SANS';
+  src: url('./assets/fonts/WorkSans-VariableFont_wght.ttf');
+}
+
+.container-landing {
+  @apply w-screen h-screen bg-primary flex items-center justify-center overflow-hidden flex-col  relative;
+}
+
+.btn {
+  @apply px-10 mt-5 py-2 bg-primary text-white rounded-full shadow-[0px_3px_3px_rgba(0,0,0,0.2)] flex items-center gap-3  transition-all border-white border;
+
+  &:hover,
+  :focus {
+    @apply text-white bg-primary border-primary;
+
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+    box-shadow: 0 5 5px rgba(152, 173, 200), 0 20 20px rgb(148, 186, 236);
+  }
+}
+
+.container-carousel {
+  @apply flex items-center justify-center  relative h-[11rem]  z-20 pb-24 mt-20;
+}
+
+.container-image__ucapan {
+  @apply flex items-center justify-center  w-full    rounded-full relative;
+}
+
+.main-title {
+  @apply text-2xl  capitalize text-center font-miama  flex flex-col text-white gap-3 mt-5;
+
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 1);
+}
+
+.text-shadow-white {
+  text-shadow: 4px 4px 4px rgb(0, 0, 0, 0.2);
+}
