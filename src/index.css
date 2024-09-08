@@ -34,7 +34,7 @@
 }
 
 .container-carousel {
-  @apply flex items-center justify-center  relative h-[11rem]  z-20 pb-24 mt-20;
+  @apply flex  justify-center  relative h-[11rem] z-20;
 }
 
 .container-image__ucapan {
