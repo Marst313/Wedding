@@ -25,7 +25,7 @@ const Carousel = () => {
           animate={{ opacity: index === currentIndex ? 1 : 0 }}
           transition={{ duration: 3 }}
         >
-          <img src={item.url} alt={item.alt} className="h-[10rem]  w-[7rem] hover:scale-110 overflow-hidden rounded-xl transition-all object-cover" />
+          <img src={item.url} alt={item.alt} className="h-[13rem]  w-[10rem] hover:scale-110 overflow-hidden rounded-xl transition-all object-cover" />
         </motion.li>
       ))}
     </motion.ul>

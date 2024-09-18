@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import { Navbar } from '../components';
-import song from '../assets/janjisuci.mp3';
+import song from '../assets/A Thousand Years.mp3';
 import { useEffect, useRef, useState } from 'react';
 import { HiOutlineSpeakerWave, HiOutlineSpeakerXMark } from 'react-icons/hi2';
 

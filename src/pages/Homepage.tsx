@@ -24,10 +24,10 @@ const Homepage = () => {
           <div className=" flex justify-center items-center">
             {/* Container for the curved text */}
             <div className="absolute top-44">
-              <h3 className="main-title text-slate-800 font-bold text-center" style={{ transform: 'rotate(-10deg) translateY(-20px)', transformOrigin: 'bottom center' }}>
-                Febry Romadhoni
+              <h3 className="main-title text-slate-800 font-bold text-center" style={{ transform: 'rotate(-10deg) translateY(10px)', transformOrigin: 'bottom center' }}>
+                Nurul Sasmitaningrum
                 <span>&</span>
-                <span>Nurul Sasmitaningrum</span>
+                <span> Febry Romadhoni</span>
               </h3>
             </div>
             {/* The image */}

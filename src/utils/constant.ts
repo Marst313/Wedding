@@ -49,7 +49,7 @@ export const listNavbar: INavbarList[] = [
   },
   {
     no: 5,
-    name: 'gift',
+    name: 'penutup',
     icon: FcMoneyTransfer,
   },
 ];
