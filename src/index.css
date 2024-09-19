@@ -22,7 +22,7 @@
 }
 
 .btn {
-  @apply px-10 mt-5 py-2 bg-primary text-white rounded-full shadow-[0px_3px_3px_rgba(0,0,0,0.2)] flex items-center gap-3  transition-all border-white border z-50;
+  @apply px-10  py-2 bg-primary text-white rounded-full shadow-[0px_3px_3px_rgba(0,0,0,0.2)] flex items-center gap-3  transition-all border-white border z-50;
 
   &:hover,
   :focus {
@@ -42,11 +42,11 @@
 }
 
 .main-title {
-  @apply text-2xl  capitalize text-center font-miama  flex flex-col text-white gap-3 mt-5;
+  @apply text-xl  capitalize text-center font-miama  flex flex-col text-white gap-3 mt-5;
 
   text-shadow: 4px 4px 4px rgba(0, 0, 0, 1);
 }
 
 .text-shadow-white {
-  text-shadow: 4px 4px 4px rgb(0, 0, 0, 0.2);
+  text-shadow: 4px 4px 4px rgba(250, 249, 249, 0.5);
 }

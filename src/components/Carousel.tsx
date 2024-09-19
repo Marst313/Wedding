@@ -10,7 +10,7 @@ const Carousel = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex === carousel.length - 1 ? 0 : prevIndex + 1));
-    }, 3500);
+    }, 4500);
 
     return () => clearInterval(interval); // Cleanup on unmount
   }, [carousel.length]);

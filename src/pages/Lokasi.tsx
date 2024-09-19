@@ -30,7 +30,7 @@ const Lokasi = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5, ease: 'easeInOut' }}
           whileHover={{ scale: 1.1, rotate: 3 }}
-          className="relative z-30  flex  gap-2 justify-center items-center border-2 border-white  bg-sky-700 text-white px-10 py-2 rounded-full hover:bg-sky-600"
+          className="relative z-50  flex  gap-2 justify-center items-center border-2 border-white  bg-sky-700 text-white px-10 py-2 rounded-full hover:bg-sky-600"
           href="https://maps.app.goo.gl/2SLLH9ZH1VNyJeYMA"
           target="_blank"
         >
@@ -45,8 +45,8 @@ const Lokasi = () => {
       <motion.img src={topRight} alt="top right" className="absolute top-0 -right-1 z-20 w-48" initial={{ x: 500 }} animate={{ x: 0 }} transition={{ duration: 2 }} />
       <motion.img src={topLeft} alt="top left" className="absolute top-0 -left-2 z-20 w-48" initial={{ x: -500 }} animate={{ x: 0 }} transition={{ duration: 2 }} />
 
-      <motion.img src={topRight} alt="bottom left" className="absolute sm:bottom-0 -left-1 z-20 w-48 rotate-180 -mt-72 " initial={{ x: -500, rotate: 180 }} animate={{ x: 0 }} transition={{ duration: 2 }} />
-      <motion.img src={topLeft} alt="bottom right" className="absolute  sm:bottom-0 -right-0 z-20 w-48 rotate-180 -mt-72 " initial={{ x: 500, rotate: 180 }} animate={{ x: 0 }} transition={{ duration: 2 }} />
+      <motion.img src={topRight} alt="bottom left" className="absolute sm:bottom-0 -left-1 z-10 w-48 rotate-180 -mt-72 " initial={{ x: -500, rotate: 180 }} animate={{ x: 0 }} transition={{ duration: 2 }} />
+      <motion.img src={topLeft} alt="bottom right" className="absolute  sm:bottom-0 -right-0 z-10 w-48 rotate-180 -mt-72 " initial={{ x: 500, rotate: 180 }} animate={{ x: 0 }} transition={{ duration: 2 }} />
     </>
   );
 };
