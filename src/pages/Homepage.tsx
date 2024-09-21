@@ -6,9 +6,19 @@ import topLeft from '../assets/images/topLeft.png';
 import topRight from '../assets/images/topRight.png';
 import WomenAndMan from '../assets/images/5.jpeg';
 import leavesDrop from '../assets/images/leavesdrop.png';
+import { useEffect } from 'react';
+import { usePageContext } from '../utils/context/PageContext';
 
 const Homepage = () => {
   const params = useParams();
+
+  const { name, setName } = usePageContext();
+
+  useEffect(() => {
+    if (params.name) {
+      setName(params.name);
+    }
+  }, []);
 
   return (
     <main className="container-landing">
@@ -42,7 +52,7 @@ const Homepage = () => {
 
           <p className="text-base  text-slate-800">Yth :</p>
           <p className="text-base">
-            Bpk/Ibu Saudara/i : <span className="font-semibold   text-xl text-slate-800 capitalize "> {params.name} </span>
+            Bpk/Ibu Saudara/i : <span className="font-semibold   text-xl text-slate-800 capitalize "> {name} </span>
           </p>
 
           <Link className="btn" to="/landingpage">

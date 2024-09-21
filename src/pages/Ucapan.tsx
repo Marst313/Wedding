@@ -1,10 +1,11 @@
 import topLeft from '../assets/images/topLeft.png';
 import topRight from '../assets/images/topRight.png';
 import { motion } from 'framer-motion';
-import bg from '../assets/images/bgUcapan.png';
+import bg from '../assets/images/6.jpeg';
 import { useEffect, useState } from 'react';
 import { customFetch } from '../utils/customFetch';
 import { ApiResponse, IPostedData, TUcapan } from '../utils/type';
+import { usePageContext } from '../utils/context/PageContext';
 
 const commentVariant = {
   hidden: { opacity: 0, y: -100 },
@@ -23,7 +24,9 @@ const Ucapan = () => {
   const [comments, setComments] = useState<ApiResponse | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
 
-  const [data, setData] = useState<TUcapan>({ nama: '', ucapan: '' });
+  const { name } = usePageContext();
+
+  const [data, setData] = useState<TUcapan>({ nama: name || '', ucapan: '' });
 
   const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault();
@@ -82,17 +85,20 @@ const Ucapan = () => {
   return (
     <>
       <div className="relative z-30 flex flex-col items-center  text-center h-screen sm:h-full ">
-        <motion.h2 className=" sm:mt-0 text-xl font-workSans capitalize leading-tight text-slate-800" initial={{ x: -500 }} animate={{ x: 0 }} transition={{ duration: 2 }}>
+        <motion.h2 className=" sm:mt-0 text-sm font-workSans capitalize leading-tight text-slate-800" initial={{ x: -500 }} animate={{ x: 0 }} transition={{ duration: 2 }}>
           Kamis <br /> 21 November 2024
         </motion.h2>
 
         <motion.div className="container-image__ucapan" initial={{ x: 500 }} animate={{ x: 0 }} transition={{ duration: 2 }}>
-          <img src={bg} alt="background" className="w-40" />
+          <img src={bg} alt="background" className=" rounded-full h-40 w-40 object-cover" />
         </motion.div>
+        <h1 className="capitalize text-2xl font-miama">
+          Undangan Untuk <span className="text-slate-900 font-bold"> {name}</span>
+        </h1>
 
         <motion.form
           onSubmit={handleSubmit}
-          className="sm:mt-5 flex flex-col gap-1 bg-primary/20 backdrop-blur-sm p-1 mt-1 pb-1 rounded-xl shadow-[4px_4px_4px_rgba(0,0,0,0.3)] w-72 px-4"
+          className="sm:mt-2 flex flex-col gap-1 bg-primary/20 backdrop-blur-sm pb-1 rounded-xl shadow-[4px_4px_4px_rgba(0,0,0,0.3)] w-72 px-4"
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ duration: 2 }}
@@ -130,15 +136,15 @@ const Ucapan = () => {
             />
           </div>
 
-          <button type="submit" className="bg-sky-700 hover:bg-sky-800 rounded-xl py-2 w-24 self-center text-white text-sm" disabled={loading}>
+          <button type="submit" className="bg-sky-700 hover:bg-sky-800 w-full rounded-xl py-2 self-center text-white text-sm" disabled={loading}>
             {loading ? 'Loading...' : 'Kirim'}
           </button>
         </motion.form>
 
         <h1 className="mt-1 items-start font-semibold text-sm text-slate-700 sm:self-center">Ucapan Dan Salam:</h1>
-        <motion.ol initial="hidden" animate="visible" className="h-32 items-center w-72 overflow-auto flex flex-col gap-2 rounded-xl py-2 px-4 shadow-[4px_4px_4px_rgba(0,0,0,0.3)] backdrop-blur-sm m-1 font-workSans font-normal">
+        <motion.ol initial="hidden" animate="visible" className="h-32 items-center w-72 overflow-auto flex flex-col gap-2 rounded-xl  px-4 shadow-[4px_4px_4px_rgba(0,0,0,0.3)] backdrop-blur-sm  font-workSans font-normal py-1">
           {comments?.records.map((comment, i) => (
-            <motion.li key={i} custom={i} variants={commentVariant} transition={{ duration: 2 }} className="w-full px-4 py-2 rounded-xl bg-white">
+            <motion.li key={i} custom={i} variants={commentVariant} transition={{ duration: 2 }} className="w-full px-4  rounded-xl bg-white">
               <h1 className="text-sm font-semibold capitalize text-slate-900">{comment.fields.nama}</h1>
               <hr className="my-1 border-t border-gray-400" />
               <p className="text-sm text-slate-800  text-justify">{comment.fields.ucapan}</p>
