@@ -16,6 +16,11 @@ const Homepage = () => {
 
   useEffect(() => {
     if (params.name) {
+      if (params.name.includes('-')) {
+        setName(params.name.replace('-', ' '));
+        return;
+      }
+
       setName(params.name);
     }
   }, []);

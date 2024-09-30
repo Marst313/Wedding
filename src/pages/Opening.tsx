@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const Opening = () => {
   return (
-    <div className=" ">
+    <div>
       <Carousel />
 
       <motion.div className="description max-w-sm mx-auto z-20 relative px-5 rounded-tr-2xl h-screen rounded-bl-2xl font-workSans mt-32" initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ duration: 2 }}>
